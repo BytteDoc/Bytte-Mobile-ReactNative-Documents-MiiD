@@ -110,6 +110,69 @@ configurar en el archivo Info.plist para el uso de la ***Cámara***
 `Privacy - Camera Usage Description`
 
 ####  2.4. Configuración  Android
+## Android
+
+
+* **Se debe verificar la calidad de la cámara, es recomendable utilizar dispositivos con cámara que tengan la característica de “Auto Foco” habilitada**
+* **Se recomiendan cámaras con resolución mayores o iguales a 5 Mega Pixeles para un óptimo rendimiento**
+* **El SDK no funciona sobre dispositivos virtuales, únicamente sobre dispositivos físicos IPhone y**
+* **Sistemas soportados Android 5.0 o superior gradle 4.1.2 o superior arquitecturas x86,64 bits**
+
+
+### Para compilación de aplicación en plataforma Android, se requiere:
+* **Java JDK Versión 1.8, 11, 17
+* **Android SDK** 
+* **Funciona con Android 24 o superior**
+
+## Los permisos en runtime deben ser solicitados por la app
+para el uso de bytte es necesario los siguientes:
+uso de ***Camara y almacenamiento***
+
+`<uses-permission android:name="android.permission.CAMERA" />`
+
+`<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>`
+
+######   Adicionar la implementación bytte a su proyecto 
+
+``` npm i react-native-rn-bytte-bio-lib-miid --save```
+
+Luego vamos a android en la app, para la configuración en el archivo 
+`build.gradle` del proyecto
+
+`android/build.gradle`:
+
+##### en la etiqueta 
+   ``` 
+allprojects {
+    repositories {
+      maven {
+            url ''
+            name ''
+        credentials {
+            username ""
+            password ""
+        }
+    }
+    }
+}
+
+   ``` 
+
+Solicitar a **Bytte lo siguiente:**   ingresarlo dentro de los "" 
+- **url**
+- **name**
+- **username**
+- **password**
+
+
+Tener en cuenta que debe estar habilitado multidex para android revisar la documentación para generarlo en react-native
+' multiDexEnabled true'
+Las librerías bytte soportan las arquitecturas a 32 y 64 bits necesarias para Android
+ ndk{
+             abiFilters  "armeabi-v7a", 'arm64-v8a'
+        }
+        
+
 
 #### 2.5. Uso de la librería
 
@@ -165,24 +228,19 @@ configurar en el archivo Info.plist para el uso de la ***Cámara***
 ```
 <string name="OK">0000</string><string name="TimeOut">0001</string>
 <string name="Cancelado_a_proposito">0002</string>
-<string name="Error_de_Licencia_MicroBlink">0111</string>
 <string name="Error_No_tiene_permisos_camara">0112</string>
-<string name="Error_de_Licencia_Biometria">0113</string>
-<string name="Error_Captura_de_huellas">0114</string>
+
 
 
 <string name="timeOut">TimeOut</string>
 <string name="Canceladoproposito">Cancelado a proposito</string>
-<string name="ErrorLicencia_MicroBlink">Error de Licencia MicroBlink"</string>
-<string name="ErrorLicencia_Biometria">Error de Licencia biometria"</string>
-<string name="Error_Capturahuellas">Error en la captura de las huellas"</string>
-<string name="ErrorLicenciaBiometria">Error licencia de  biometria"</string>
+
 
 ------------------------------
 Control de cambios
 ------------------------------
 ------------------------------
-| 9-nov-2021 | Actualizacion librerías microblink para captura de documentos, cambio de librería para la captura biometria|
+
 ```
 
 ## Ejemplo Demo
