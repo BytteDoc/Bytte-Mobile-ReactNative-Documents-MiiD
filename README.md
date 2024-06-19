@@ -109,7 +109,7 @@ configurar en el archivo Info.plist para el uso de la ***Cámara***
 
 `Privacy - Camera Usage Description`
 
-# 2.4. Configuración  Android
+####  2.4. Configuración  Android
 
 #### 2.5. Uso de la librería
 
