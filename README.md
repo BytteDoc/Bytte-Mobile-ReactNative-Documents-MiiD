@@ -176,9 +176,27 @@ Las librerías bytte soportan las arquitecturas a 32 y 64 bits necesarias para A
 
 #### 2.5. Uso de la librería
 
-* Una vez instalado el plugin, la aplicación destino heredará el Javascript expuesto por este, el cual expone las siguientes operaciones:
-  > * startBackDocument
-  > * startFrontDocument
+Bytte proporcionará los siguientes datos de configuración:
+
+* URL
+* ClientID
+* ClientKey
+* SesionID
+
+El parametro tipoCaptura determinara que tipo de documento capturara:
+* cc
+  * Cédula Colombiana Hologramas
+* ccv2
+  * Cédula Colombiana Digital
+* ccext
+  * Cédula Extranjeria
+* pasport
+  * Pasaporte (Únicamente disponible para **startFrontDocument**)
+
+Una vez instalado el plugin, la aplicación destino heredará el Javascript expuesto por este, el cual expone las siguientes operaciones:
+
+   * startBackDocument
+   * startFrontDocument
 
 ##### ***startBackDocument***
 
@@ -225,27 +243,7 @@ Las librerías bytte soportan las arquitecturas a 32 y 64 bits necesarias para A
 ```
 
 
-```
-<string name="OK">0000</string><string name="TimeOut">0001</string>
-<string name="Cancelado_a_proposito">0002</string>
-<string name="Error_No_tiene_permisos_camara">0112</string>
 
-
-
-<string name="timeOut">TimeOut</string>
-<string name="Canceladoproposito">Cancelado a proposito</string>
-
-
-------------------------------
-Control de cambios
-------------------------------
-------------------------------
-
-```
-
-## Ejemplo Demo
-
-URL:  [http://www.bytte.com.co/ftpaccess/Varios/CarlosG/ReactNative/bytteTest.zip](http://www.bytte.com.co/ftpaccess/Varios/CarlosG/ReactNative/bytteTest.zip)
 
 
 
