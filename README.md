@@ -183,7 +183,7 @@ Bytte proporcionará los siguientes datos de configuración:
 * ClientKey
 * SesionID
 
-El parametro tipoCaptura determinara que tipo de documento capturara:
+El parámetro tipoCaptura determinará el documento que se capturará:
 * cc
   * Cédula Colombiana Hologramas
 * ccv2
